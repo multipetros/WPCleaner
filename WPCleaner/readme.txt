@@ -1,5 +1,5 @@
-WLAN Profile Cleaner - version 1.0
-Copyright (C) 2013, Petros Kyladitis
+﻿WLAN Profile Cleaner - version 1.1
+Copyright (C) 2013-2020, Petros Kyladitis
 
 
 Description

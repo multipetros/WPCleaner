@@ -42,10 +42,14 @@ namespace WPCleaner{
 					profiles = new Netsh() ;
 				else
 					profiles.LoadProfiles() ;
-				listBoxProfiles.Items.AddRange(profiles.Profiles) ;
-				listBoxProfiles.SetSelected(0, true) ;
-				noProfiles = false ;
+				
+				if(profiles.Profiles.Length > 0){
+					listBoxProfiles.Items.AddRange(profiles.Profiles) ;
+					listBoxProfiles.SetSelected(0, true) ;
+					noProfiles = false ;
+				}
 			}
+			
 			//on errors set noProfiles to true and add apropriate 
 			//error message as item to the names list
 			catch(System.ComponentModel.Win32Exception){
@@ -88,7 +92,7 @@ namespace WPCleaner{
 		}
 		
 		void ButtonAboutClick(object sender, EventArgs e){
-			MessageBox.Show("WLAN Profile Cleaner - version 1.0\nCopyright (c) 2013, Petros Kyladitis\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.","About WPCleaner...", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
+			MessageBox.Show("WLAN Profile Cleaner - version 1.1\nCopyright (c) 2013-2020, Petros Kyladitis\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.","About WPCleaner...", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
 		}
 	}
 }

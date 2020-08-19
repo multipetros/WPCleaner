@@ -24,6 +24,7 @@ namespace WPCleaner{
 		private const string DELETE_ARGS = "wlan delete profile name=" ;
 		private const string LEADIN_DELIMITER = " :" ;
 		private const string LEADOUT_DELIMITER = "\r\n" ;
+		private const string EX_MSG_NO_PROFILE = "No wlan profiles stored" ;
 		
 		/// <summary>
 		/// Default object contructor. Loading the stored profiles list.
@@ -62,11 +63,14 @@ namespace WPCleaner{
 				}else{
 					//if no leadout found and no profile in the list throw exception
 					if(profiles.Count == 0)
-						throw new NoProfilesException("No wlan profiles stored") ;
+						throw new NoProfilesException(EX_MSG_NO_PROFILE) ;
 				}
 				//find the next profile leadin
 				profileLeadIn = netshOutput.IndexOf(LEADIN_DELIMITER, profileLeadOut) ;
 			}
+			//if no profile in the list throw exception
+			if(profiles.Count == 0)
+				throw new NoProfilesException(EX_MSG_NO_PROFILE) ;
 		}
 		
 		/// <summary>
