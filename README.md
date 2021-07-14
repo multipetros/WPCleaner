@@ -11,11 +11,11 @@ For updates and more info see at <http://multipetros.gr/public-projects/wpcleane
  
 
 ## Requirements
-WPCleaner need the .NET Framework 4 be installed in your system . In MS Windows 8 _(and above)_, the .NET 4 framework is installed by default. _You can download .NET 4 framework from <http://www.microsoft.com/net/download/version-4>_
+WPCleaner need the .NET Framework 4 be installed in your system . In MS Windows 8 _(and above)_, the .NET 4 framework is installed by default. _You can download .NET 4 framework from <https://dotnet.microsoft.com/download/dotnet-framework/net40>_
  
 
 ## Screenshots
-![Screenshot](https://raw.githubusercontent.com/multipetros/WPCleaner/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/multipetros/WPCleaner/master/.github/screenshot.png)
   
 
 ## Download
